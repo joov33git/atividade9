@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Número para teste: <input id="num" type="number" /> <br />
+    <button onclick="primo()">Testar</button><br />
+    Resultado: <div id="resposta">
+    <script>
+        function primo(){
+  var numero = parseInt(document.getElementById('num').value);
+  var resposta = document.getElementById('resposta');
+  var divisores=0;
+
+  
+
+  for(var count=1 ; count<=numero ; count++)
+   if(numero % count == 0)
+   	divisores++;
+  
+  if(divisores==2)
+  	resposta.innerHTML='É primo';
+  else
+  	resposta.innerHTML='Não é primo';
+
+
+}
+    </script>
+</body>
+</html>
